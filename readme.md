@@ -128,3 +128,177 @@ Codigo generado por Gemini con su prompt
 ![Respuesta de Wave](/gemini/resultadoGeminiWave.jpg)
 - Respuesta de EqualWEb
 ![Respuesta de Equalweb](/gemini/resultado%20Gemini%20con%20equal.jpg)
+
+### Test con Mistral
+
+- Prompt:
+> Prompt para Mejorar la Accesibilidad Web según WCAG 2.2
+> Objetivo
+> Modificar el código HTML para cumplir con los estándares de accesibilidad web establecidos por la normativa WCAG 2.2 (WAI) y el uso adecuado de etiquetas ARIA. El código debe cumplir con los criterios de accesibilidad de nivel AA (y opcionalmente AAA).
+> 
+> Instrucciones
+> Atributos ARIA:
+> 
+> Agrega atributos ARIA adecuados para formularios, botones, imágenes y enlaces.
+> Ejemplo: `<button aria-label="Enviar formulario">Enviar</button>`.
+> Semántica del Documento:
+> 
+> Utiliza etiquetas HTML5 semánticas como `<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, etc.
+> Ejemplo: `<header><h1>Título Principal</h1></header>`.
+> Textos Alternativos:
+> 
+> Asegúrate de que todas las imágenes tengan textos alternativos descriptivos.
+> Ejemplo: `<img src="imagen.jpg" alt="Descripción de la imagen">`.
+> Jerarquía de Encabezados:
+> 
+> Mantén una jerarquía adecuada de encabezados (h1, h2, h3, etc.).
+> Ejemplo: `<h1>Título Principal</h1>`, `<h2>Subtítulo</h2>`.
+> Contraste y Legibilidad:
+> 
+> Implementa controles de contraste adecuados entre texto y fondo.
+> Ejemplo: Usa herramientas como WAVE para verificar el contraste.
+> Navegación por Teclado:
+> 
+> Asegura que todos los elementos interactivos sean accesibles mediante teclado.
+> Ejemplo: Usa tabindex cuando sea necesario.
+> Formularios Accesibles:
+> 
+> Asocia correctamente las etiquetas con los campos de formulario.
+> Ejemplo: `<label for="nombre">Nombre</label><input id="nombre" type="text">`.
+> Validación de Accesibilidad:
+> 
+> Valida la accesibilidad utilizando herramientas como WAVE, Axe, Lighthouse, Accessibility Insights, Access Assistant, ANDI y ARC Toolkit.
+> Documenta los resultados obtenidos antes y después de la aplicación del prompt.
+> Ejemplo de Código HTML Inicial
+> 
+> `<!DOCTYPE html>`
+> `<html lang="es">`
+> `<head>`
+>     `<meta charset="UTF-8">`
+>     `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+>     `<title>Ejemplo de Accesibilidad</title>`
+> `</head>`
+> `<body>`
+>     `<div>`
+>         `<h1>Título Principal</h1>`
+>         `<p>Este es un párrafo de ejemplo.</p>`
+>         `<img src="imagen.jpg" alt="">`
+>         `<form>`
+>             `<input type="text" placeholder="Nombre">`
+>             `<button>Enviar</button>`
+>         `</form>`
+>     `</div>`
+> `</body>`
+> `</html>`
+> Ejemplo de Código HTML Optimizado
+> 
+> `<!DOCTYPE html>`
+> `<html lang="es">`
+> `<head>`
+>     `<meta charset="UTF-8">`
+>     `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+>     `<title>Ejemplo de Accesibilidad</title>`
+> `</head>`
+> `<body>`
+>     `<header>`
+>         `<h1>Título Principal</h1>`
+>     `</header>`
+>     `<main>`
+>         `<section>`
+>             `<p>Este es un párrafo de ejemplo.</p>`
+>             `<img src="imagen.jpg" alt="Descripción de la imagen">`
+>         `</section>`
+>         `<section>`
+>             `<form>`
+>                 `<label for="nombre">Nombre</label>`
+>                 `<input id="nombre" type="text" aria-required="true">`
+>                 `<button aria-label="Enviar formulario">Enviar</button>`
+>             `</form>`
+>         `</section>`
+>     `</main>`
+>     `<footer>`
+>         `<p>Pie de página</p>`
+>     `</footer>`
+> `</body>`
+> `</html>`
+> Validación y Ajustes
+> Aplicación del Prompt:
+> 
+> Aplica el prompt en un IDE con un asistente de programación (GitHub Copilot, ChatGPT, u otro).
+> Evalúa los cambios generados en el código HTML.
+> Validación:
+> 
+> Utiliza al menos tres herramientas de validación (WAVE, Axe, Lighthouse, etc.) para verificar la accesibilidad del código.
+> Documenta los resultados obtenidos antes y después de la aplicación del prompt.
+> Ajustes Iterativos:
+> 
+> Si el código no cumple con los criterios, ajusta el prompt y repite el proceso hasta lograr un resultado óptimo.
+> Este prompt está diseñado para ser claro y efectivo, guiando al asistente de programación para realizar las modificaciones necesarias y cumplir con los estándares de accesibilidad WCAG 2.2.
+
+
+Codigo generado por Mistral con su prompt
+[Index.html](/mistral/solucionMistral.html)
+- Respuesta de Wave
+![Respuesta de Wave](/mistral/resultado%20mistral%20con%20wave.jpg)
+- Respuesta de EqualWEb
+![Respuesta de Equalweb](/mistral/resultado%20mistral%20con%20equals.jpg)
+
+### Test con Qwen
+
+- Prompt:
+
+> "Refactoriza este código HTML para cumplir con los estáandares de accesibilidad WCAG 2.2 nivel AA (y opcionalmente AAA). Las modificaciones deben incluir:
+> 
+> 1. Semántica:
+> - Reemplaza divs genéricos por etiquetas semánticas apropiadas (`<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, etc.)
+> - Asegura una estructura lógica y jerarquía correcta de encabezados (h1, h2, h3, etc.)
+> 
+> 2. Imágenes:
+> - Agrega atributos alt descriptivos a todas las imágenes significativas
+> - Usa alt="" para imágenes decorativas
+> - Considera la relación entre el texto alternativo y el contexto del contenido
+> 
+> 3. Formularios:
+> - Asocia cada campo de entrada con su etiqueta correspondiente usando el atributo 'for'
+> - Incluye atributos ARIA relevantes como aria-labelledby o aria-describedby cuando sea necesario
+> - Proporciona indicaciones claras sobre requisitos de campos obligatorios
+> - Implementa mensajes de error accesibles mediante roles ARIA adecuados
+> 
+> 4. Enlaces:
+> - Usa textos descriptivos en lugar de "Haz clic aquí" o "Leer más"
+> - Asegura que los enlaces sean distinguibles sin depender únicamente de color
+> 
+> 5. Botones:
+> - Etiqueta correctamente los botones con texto descriptivo
+> - Usa atributos ARIA si es necesario para mejorar comprensión
+> 
+> 6. Tablas:
+> - Define cabeceras de tabla usando `<th>` con scope adecuado
+> - Usa atributos ARIA si es necesario para mejorar navegación
+> 
+> 7. Navegación por teclado:
+> - Asegura que todos los elementos interactivos sean accesibles mediante teclado
+> - Mantiene un orden lógico de tabulación
+> 
+> 8. Contraste:
+> - Garantiza un contraste suficiente entre texto y fondo (al menos 4.5:1 para texto normal)
+> 
+> 9. Otros:
+> - Añade landmarks ARIA si es necesario para mejorar navegación asistida
+> - Elimina cualquier contenido parpadeante o que pueda causar problemas de accesibilidad
+> - Asegura que todo el contenido sea accesible mediante múltiples formas (no solo dependiendo de un único sentido)
+> 
+> Genera el código modificado completo manteniendo la funcionalidad original pero mejorando la accesibilidad."
+
+Codigo generado por Mistral con su prompt
+[Index.html](/qwen/resultadoQwen.html)
+- Ojo que tambien ha cambiado el diseño
+![Cambio en el diseño](/qwen/cambio%20de%20diseño%20con%20qwen.jpg)
+- Respuesta de Wave
+![Respuesta de Wave](/qwen/errores%20de%20wave%20con%20qwen.jpg)
+- Respuesta de EqualWEb
+![Respuesta de Equalweb](/qwen/errores%20de%20qwen%20con%20equal.jpg)
+
+
+Conclusion:
+<h1>La IA no nos quitará el Trabajo!!</h1>
