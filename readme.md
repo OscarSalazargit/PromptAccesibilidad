@@ -91,31 +91,31 @@ Codigo generado por ChatGPT con su prompt
 >        - Agrega atributos ARIA (ej. aria-label, aria-describedby, aria-labelledby) para proporcionar información adicional a tecnologías de asistencia.
 >        - Utiliza propiedades ARIA (ej. aria-expanded, aria-hidden) para indicar el estado de elementos interactivos.
 >    - Semántica HTML5:
->        - Utiliza etiquetas HTML5 semánticas (<header>, <nav>, <main>, <article>, <section>, <footer>) para estructurar el contenido de manera lógica.
+>        - Utiliza etiquetas HTML5 semánticas (< header>, < nav>, < main>, < article>, < section>, < footer>) para estructurar el contenido de manera lógica.
 >    - Texto Alternativo para Imágenes:
 >        - Asegúrate de que todas las imágenes tengan atributos alt descriptivos y concisos.
 >        - Si la imagen es decorativa, utiliza un atributo alt vacío (alt="").
 >    - Jerarquía de Encabezados:
->        - Utiliza encabezados (<h1> a <h6>) para estructurar el contenido de manera jerárquica y lógica.
->        - Asegúrate de que los encabezados estén anidados correctamente (ej. <h1> seguido de <h2>, no de <h3>).
+>        - Utiliza encabezados (< h1> a < h6>) para estructurar el contenido de manera jerárquica y lógica.
+>        - Asegúrate de que los encabezados estén anidados correctamente (ej. < h1> seguido de < h2>, no de < h3>).
 >    - Contraste de Color:
 >        - Verifica que el contraste entre el texto y el fondo cumpla con los requisitos de WCAG 2.2 (mínimo 4.5:1 para texto normal y 3:1 para texto grande).
 >    - Accesibilidad con Teclado:
 >        - Asegúrate de que todos los elementos interactivos (enlaces, botones, formularios) sean accesibles y utilizables mediante el teclado.
 >        - Utiliza indicadores visuales de enfoque para elementos interactivos.
 >    - Formularios Accesibles:
->        - Asocia etiquetas (<label>) con sus respectivos campos de formulario (<input>, <textarea>, <select>).
+>        - Asocia etiquetas (< label>) con sus respectivos campos de formulario (< input>, < textarea>, < select>).
 >        - Utiliza atributos placeholder para proporcionar información adicional en campos de formulario.
 >        - Utiliza el atributo required para indicar campos obligatorios.
 >    - Idioma del Contenido:
->        - Especifica el idioma del contenido utilizando el atributo lang en la etiqueta <html>.
+>        - Especifica el idioma del contenido utilizando el atributo lang en la etiqueta < html>.
 >    - Etiquetas de Título:
->        - Asegúrate de que cada página tenga una etiqueta <title> descriptiva y concisa.
+>        - Asegúrate de que cada página tenga una etiqueta < title> descriptiva y concisa.
 >    - Enlaces:
 >        - Utiliza texto descriptivo en los enlaces.
 >        - Evita el texto de enlace genérico como "haz clic aquí".
 >    - Tablas:
->        - Utiliza encabezados de tabla (<th>) para proporcionar información sobre las columnas y filas.
+>        - Utiliza encabezados de tabla (< th>) para proporcionar información sobre las columnas y filas.
 >        - Utiliza el atributo scope para asociar encabezados de tabla con sus respectivas celdas.
 >3. Valida el código modificado utilizando herramientas de validación de accesibilidad como WAVE, Axe y Lighthouse.
 >4. Ajusta el código y el prompt según sea necesario hasta que cumpla con los criterios de accesibilidad de nivel AA (y opcionalmente AAA).
