@@ -54,4 +54,24 @@ Pagina generada original con los estilos:
 - Equals
 ![Errores de equals](/origen/errores%20sin%20semantica%20todo%20divs%20Equal.jpg)
 
+### Test con ChatGPT 
 
+- Promopt:
+> Genera un código HTML completamente accesible según las WCAG 2.2 nivel AA. Debe cumplir con los siguientes requisitos:
+> 
+> Uso correcto de etiquetas semánticas de HTML5 para estructurar el contenido (header, main, nav, article, section, aside, footer).
+> Compatibilidad con navegación por teclado (sin tabindex innecesarios, con un orden lógico de tabulación).
+> Contrastes adecuados en colores y tipografía accesible (mínimo 4.5:1 para texto normal, 3:1 para UI).
+> Elementos interactivos accesibles (botones con etiquetas claras, enlaces con descripciones significativas, formularios con etiquetas asociadas y mensajes de error accesibles).
+> Uso de ARIA solo cuando sea estrictamente necesario y conforme a las mejores prácticas.
+> Multimedia accesible (subtítulos en videos, descripciones en imágenes mediante alt, controles visibles para contenido multimedia).
+> Compatibilidad con tecnologías de asistencia (lectores de pantalla, ampliadores de texto, comandos de voz).
+> Validación con herramientas de accesibilidad como Lighthouse y axe DevTools.
+> El código debe ser limpio, comentado cuando sea necesario y escrito bajo la metodología BEM para CSS.
+
+Codigo generado por ChatGPT con su prompt
+[Index.html](/chatgpt/solucionChatGPT.html)
+- Respuesta de Wave
+![Respuesta de Wave](/chatgpt/solucion%20chat%20gpt%20WAVE.jpg)
+- Respuesta de EqualWEb
+[Respuesta de Equalweb](/chatgpt/solucion%20chat%20gpt%20Equals.jpg)
