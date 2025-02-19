@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header__menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .header__menu-item a {
+            color: white;
+            text-decoration: none;
+        }
+        .main {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .category-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category-button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .news {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .news__card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .news__image {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .statistics {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .statistics table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .statistics th, .statistics td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .statistics th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__title">Blog de Noticias</div>
+        <div class="header__nav">
+            <div class="header__menu">
+                <div class="header__menu-item"><a href="#">Home</a></div>
+                <div class="header__menu-item"><a href="#">Política</a></div>
+                <div class="header__menu-item"><a href="#">Deportes</a></div>
+                <div class="header__menu-item"><a href="#">Tecnología</a></div>
+                <div class="header__menu-item"><a href="#">Contactar</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="sidebar__highlights">
+                <div>Noticias Destacadas</div>
+                <div>
+                    <div><a href="#">Título destacado 1</a></div>
+                    <div><a href="#">Título destacado 2</a></div>
+                    <div><a href="#">Título destacado 3</a></div>
+                </div>
+            </div>
+            <div class="sidebar__tags">
+                <div>Tags</div>
+                <div class="tags">
+                    <div class="tag">Política</div>
+                    <div class="tag">Economía</div>
+                    <div class="tag">Deportes</div>
+                    <div class="tag">Tecnología</div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div>Categorías</div>
+            <div class="category-buttons">
+                <a href="#" class="category-button">Política</a>
+                <a href="#" class="category-button">Deportes</a>
+                <a href="#" class="category-button">Tecnología</a>
+            </div>
+            <div class="sidebar__highlights">
+                <div>Noticias Destacadas</div>
+                <div>
+                    <div><a href="#">Título destacado 1</a></div>
+                    <div><a href="#">Título destacado 2</a></div>
+                    <div><a href="#">Título destacado 3</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="news__card">
+                <img src="https://loremflickr.com/300/200/politics" alt="Noticia" class="news__image">
+                <div>Elecciones Generales</div>
+                <div>El país se prepara para las elecciones con debates intensos...</div>
+                <div>18 de febrero de 2025</div>
+            </div>
+            <div class="news__card">
+                <img src="https://loremflickr.com/300/200/sports" alt="Noticia" class="news__image">
+                <div>Final de la Champions</div>
+                <div>El equipo logra una histórica victoria en la final...</div>
+                <div>17 de febrero de 2025</div>
+            </div>
+            <div class="news__card">
+                <img src="https://loremflickr.com/300/200/technology" alt="Noticia" class="news__image">
+                <div>Nueva IA revoluciona la industria</div>
+                <div>Una innovadora IA está transformando la automatización...</div>
+                <div>16 de febrero de 2025</div>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>Estadísticas de Publicaciones</div>
+            <div>
+                <div>Categoría</div>
+                <div>Esta Semana</div>
+                <div>Este Mes</div>
+                <div>Este Año</div>
+            </div>
+            <div>
+                <div>Política</div>
+                <div>15</div>
+                <div>45</div>
+                <div>320</div>
+            </div>
+            <div>
+                <div>Deportes</div>
+                <div>20</div>
+                <div>60</div>
+                <div>500</div>
+            </div>
+            <div>
+                <div>Tecnología</div>
+                <div>10</div>
+                <div>35</div>
+                <div>250</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__nav">
+            <div class="footer__menu">
+                <div><a href="#">Aviso Legal</a></div>
+                <div><a href="#">Política de Privacidad</a></div>
+                <div><a href="#">Términos y Condiciones</a></div>
+            </div>
+        </div>
+        <div class="footer__certifications">
+            <img src="cert1.png" alt="Certificación 1">
+            <img src="cert2.png" alt="Certificación 2">
+        </div>
+    </div>
+</body>
+
+</html>

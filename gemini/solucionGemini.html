@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Noticias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header__menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .header__menu-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .category-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category-button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .category-button:focus {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
+        }
+        .news {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .news__card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .news__image {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .statistics {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .statistics table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .statistics th, .statistics td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .statistics th {
+            background-color: #007BFF;
+            color: white;
+        }
+        a:focus {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Blog de Noticias</h1>
+        <nav class="header__nav" role="navigation" aria-label="Menú principal">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#">Home</a></li>
+                <li class="header__menu-item"><a href="#">Política</a></li>
+                <li class="header__menu-item"><a href="#">Deportes</a></li>
+                <li class="header__menu-item"><a href="#">Tecnología</a></li>
+                <li class="header__menu-item"><a href="#">Contactar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main" role="main">
+        <aside class="sidebar">
+            <section class="sidebar__highlights">
+                <h2>Noticias Destacadas</h2>
+                <ul>
+                    <li><a href="#">Título destacado 1</a></li>
+                    <li><a href="#">Título destacado 2</a></li>
+                    <li><a href="#">Título destacado 3</a></li>
+                </ul>
+            </section>
+            <section class="sidebar__tags">
+                <h2>Tags</h2>
+                <div class="tags">
+                    <span class="tag">Política</span>
+                    <span class="tag">Economía</span>
+                    <span class="tag">Deportes</span>
+                    <span class="tag">Tecnología</span>
+                </div>
+            </section>
+        </aside>
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <div class="category-buttons">
+                <a href="#" class="category-button" role="button">Política</a>
+                <a href="#" class="category-button" role="button">Deportes</a>
+                <a href="#" class="category-button" role="button">Tecnología</a>
+            </div>
+            <section class="sidebar__highlights">
+                <h2>Noticias Destacadas</h2>
+                <ul>
+                    <li><a href="#">Título destacado 1</a></li>
+                    <li><a href="#">Título destacado 2</a></li>
+                    <li><a href="#">Título destacado 3</a></li>
+                </ul>
+            </section>
+        </aside>
+        <section class="news">
+            <article class="news__card" aria-labelledby="elecciones-generales">
+                <img src="https://loremflickr.com/300/200/politics" alt="Noticia sobre política" class="news__image">
+                <h4 id="elecciones-generales">Elecciones Generales</h4>
+                <p>El país se prepara para las elecciones con debates intensos...</p>
+                <time datetime="2025-02-18">18 de febrero de 2025</time>
+            </article>
+            <article class="news__card" aria-labelledby="final-champions">
+                <img src="https://loremflickr.com/300/200/sports" alt="Noticia sobre deportes" class="news__image">
+                <h4 id="final-champions">Final de la Champions</h4>
+                <p>El equipo logra una histórica victoria en la final...</p>
+                <time datetime="2025-02-17">17 de febrero de 2025</time>
+            </article>
+            <article class="news__card" aria-labelledby="nueva-ia">
+                <img src="https://loremflickr.com/300/200/technology" alt="Noticia sobre tecnología" class="news__image">
+                <h4 id="nueva-ia">Nueva IA revoluciona la industria</h4>
+                <p>Una innovadora IA está transformando la automatización...</p>
+                <time datetime="2025-02-16">16 de febrero de 2025</time>
+            </article>
+        </section>
+        <section class="statistics">
+            <h3>Estadísticas de Publicaciones</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Esta Semana</th>
+                        <th scope="col">Este Mes</th>
+                        <th scope="col">Este Año</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Política</td>
+                        <td>15</td>
+                        <td>45</td>
+                        <td>320</td>
+                    </tr>
+                    <tr>
+                        <td>Deportes</td>
+                        <td>20</td>
+                        <td>60</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Tecnología</td>
+                        <td>10</td>
+                        <td>35</td>
+                        <td>250</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="footer__nav" role="navigation" aria-label="Menú de pie de página">
+            <ul class="footer__menu">
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+        <div class="footer__certifications">
+            <img src="cert1.png" alt="Certificación 1">
+            <img src="cert2.png" alt="Certificación 2">
+        </div>
+    </footer>
+</body>
+</html>

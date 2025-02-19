@@ -1,0 +1,42 @@
+"Refactoriza este código HTML para cumplir con los estáandares de accesibilidad WCAG 2.2 nivel AA (y opcionalmente AAA). Las modificaciones deben incluir:
+
+1. Semántica:
+- Reemplaza divs genéricos por etiquetas semánticas apropiadas (<header>, <footer>, <main>, <section>, <article>, etc.)
+- Asegura una estructura lógica y jerarquía correcta de encabezados (h1, h2, h3, etc.)
+
+2. Imágenes:
+- Agrega atributos alt descriptivos a todas las imágenes significativas
+- Usa alt="" para imágenes decorativas
+- Considera la relación entre el texto alternativo y el contexto del contenido
+
+3. Formularios:
+- Asocia cada campo de entrada con su etiqueta correspondiente usando el atributo 'for'
+- Incluye atributos ARIA relevantes como aria-labelledby o aria-describedby cuando sea necesario
+- Proporciona indicaciones claras sobre requisitos de campos obligatorios
+- Implementa mensajes de error accesibles mediante roles ARIA adecuados
+
+4. Enlaces:
+- Usa textos descriptivos en lugar de "Haz clic aquí" o "Leer más"
+- Asegura que los enlaces sean distinguibles sin depender únicamente de color
+
+5. Botones:
+- Etiqueta correctamente los botones con texto descriptivo
+- Usa atributos ARIA si es necesario para mejorar comprensión
+
+6. Tablas:
+- Define cabeceras de tabla usando <th> con scope adecuado
+- Usa atributos ARIA si es necesario para mejorar navegación
+
+7. Navegación por teclado:
+- Asegura que todos los elementos interactivos sean accesibles mediante teclado
+- Mantiene un orden lógico de tabulación
+
+8. Contraste:
+- Garantiza un contraste suficiente entre texto y fondo (al menos 4.5:1 para texto normal)
+
+9. Otros:
+- Añade landmarks ARIA si es necesario para mejorar navegación asistida
+- Elimina cualquier contenido parpadeante o que pueda causar problemas de accesibilidad
+- Asegura que todo el contenido sea accesible mediante múltiples formas (no solo dependiendo de un único sentido)
+
+Genera el código modificado completo manteniendo la funcionalidad original pero mejorando la accesibilidad."

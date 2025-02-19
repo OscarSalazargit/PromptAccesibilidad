@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Noticias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        aside {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .category-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category-button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .news-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .news-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .statistics {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .statistics table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .statistics th, .statistics td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .statistics th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog de Noticias</h1>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Deportes</a></li>
+                <li><a href="#">Tecnología</a></li>
+                <li><a href="#">Contactar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <section aria-labelledby="noticias-destacadas">
+                <h2 id="noticias-destacadas">Noticias Destacadas</h2>
+                <ul>
+                    <li><a href="#">Título destacado 1</a></li>
+                    <li><a href="#">Título destacado 2</a></li>
+                    <li><a href="#">Título destacado 3</a></li>
+                </ul>
+            </section>
+            <section aria-labelledby="tags">
+                <h2 id="tags">Etiquetas</h2>
+                <ul>
+                    <li>Política</li>
+                    <li>Economía</li>
+                    <li>Deportes</li>
+                    <li>Tecnología</li>
+                </ul>
+            </section>
+        </aside>
+        <aside>
+            <section aria-labelledby="categorías">
+                <h2 id="categorías">Categorías</h2>
+                <div class="category-buttons">
+                    <a href="#" class="category-button">Política</a>
+                    <a href="#" class="category-button">Deportes</a>
+                    <a href="#" class="category-button">Tecnología</a>
+                </div>
+            </section>
+            <section aria-labelledby="noticias-destacadas">
+                <h2 id="noticias-destacadas">Noticias Destacadas</h2>
+                <ul>
+                    <li><a href="#">Título destacado 1</a></li>
+                    <li><a href="#">Título destacado 2</a></li>
+                    <li><a href="#">Título destacado 3</a></li>
+                </ul>
+            </section>
+        </aside>
+        <section>
+            <article class="news-card">
+                <img src="https://loremflickr.com/300/200/politics" alt="Elecciones Generales" class="news-image">
+                <h3>Elecciones Generales</h3>
+                <p>El país se prepara para las elecciones con debates intensos...</p>
+                <time datetime="2025-02-18">18 de febrero de 2025</time>
+            </article>
+            <article class="news-card">
+                <img src="https://loremflickr.com/300/200/sports" alt="Final de la Champions" class="news-image">
+                <h3>Final de la Champions</h3>
+                <p>El equipo logra una histórica victoria en la final...</p>
+                <time datetime="2025-02-17">17 de febrero de 2025</time>
+            </article>
+            <article class="news-card">
+                <img src="https://loremflickr.com/300/200/technology" alt="Nueva IA revoluciona la industria" class="news-image">
+                <h3>Nueva IA revoluciona la industria</h3>
+                <p>Una innovadora IA está transformando la automatización...</p>
+                <time datetime="2025-02-16">16 de febrero de 2025</time>
+            </article>
+        </section>
+    </main>
+    <div class="statistics" role="table" aria-label="Estadísticas de Publicaciones">
+        <h2>Estadísticas de Publicaciones</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Esta Semana</th>
+                    <th scope="col">Este Mes</th>
+                    <th scope="col">Este Año</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Política</th>
+                    <td>15</td>
+                    <td>45</td>
+                    <td>320</td>
+                </tr>
+                <tr>
+                    <th scope="row">Deportes</th>
+                    <td>20</td>
+                    <td>60</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tecnología</th>
+                    <td>10</td>
+                    <td>35</td>
+                    <td>250</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <nav aria-label="Menú de pie de página">
+            <ul>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+        <div class="footer__certifications">
+            <img src="cert1.png" alt="Certificación 1">
+            <img src="cert2.png" alt="Certificación 2">
+        </div>
+    </footer>
+</body>
+</html>

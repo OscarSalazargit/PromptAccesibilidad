@@ -1,0 +1,261 @@
+Refactoriza este código HTML para cumplir con los estáandares de accesibilidad WCAG 2.2 nivel AA (y opcionalmente AAA). Las modificaciones deben incluir:
+
+1. Semántica:
+- Reemplaza divs genéricos por etiquetas semánticas apropiadas (<header>, <footer>, <main>, <section>, <article>, etc.)
+- Asegura una estructura lógica y jerarquía correcta de encabezados (h1, h2, h3, etc.)
+
+2. Imágenes:
+- Agrega atributos alt descriptivos a todas las imágenes significativas
+- Usa alt="" para imágenes decorativas
+- Considera la relación entre el texto alternativo y el contexto del contenido
+
+3. Formularios:
+- Asocia cada campo de entrada con su etiqueta correspondiente usando el atributo 'for'
+- Incluye atributos ARIA relevantes como aria-labelledby o aria-describedby cuando sea necesario
+- Proporciona indicaciones claras sobre requisitos de campos obligatorios
+- Implementa mensajes de error accesibles mediante roles ARIA adecuados
+
+4. Enlaces:
+- Usa textos descriptivos en lugar de "Haz clic aquí" o "Leer más"
+- Asegura que los enlaces sean distinguibles sin depender únicamente de color
+
+5. Botones:
+- Etiqueta correctamente los botones con texto descriptivo
+- Usa atributos ARIA si es necesario para mejorar comprensión
+
+6. Tablas:
+- Define cabeceras de tabla usando <th> con scope adecuado
+- Usa atributos ARIA si es necesario para mejorar navegación
+
+7. Navegación por teclado:
+- Asegura que todos los elementos interactivos sean accesibles mediante teclado
+- Mantiene un orden lógico de tabulación
+
+8. Contraste:
+- Garantiza un contraste suficiente entre texto y fondo (al menos 4.5:1 para texto normal)
+
+9. Otros:
+- Añade landmarks ARIA si es necesario para mejorar navegación asistida
+- Elimina cualquier contenido parpadeante o que pueda causar problemas de accesibilidad
+- Asegura que todo el contenido sea accesible mediante múltiples formas (no solo dependiendo de un único sentido)
+
+Genera el código modificado completo manteniendo la funcionalidad original pero mejorando la accesibilidad.
+CODIGO a Cambiar:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header__menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .header__menu-item a {
+            color: white;
+            text-decoration: none;
+        }
+        .main {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .category-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category-button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .news {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .news__card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .news__image {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .statistics {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .statistics table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .statistics th, .statistics td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .statistics th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__title">Blog de Noticias</div>
+        <div class="header__nav">
+            <div class="header__menu">
+                <div class="header__menu-item"><a href="#">Home</a></div>
+                <div class="header__menu-item"><a href="#">Política</a></div>
+                <div class="header__menu-item"><a href="#">Deportes</a></div>
+                <div class="header__menu-item"><a href="#">Tecnología</a></div>
+                <div class="header__menu-item"><a href="#">Contactar</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="sidebar__highlights">
+                <div>Noticias Destacadas</div>
+                <div>
+                    <div><a href="#">Título destacado 1</a></div>
+                    <div><a href="#">Título destacado 2</a></div>
+                    <div><a href="#">Título destacado 3</a></div>
+                </div>
+            </div>
+            <div class="sidebar__tags">
+                <div>Tags</div>
+                <div class="tags">
+                    <div class="tag">Política</div>
+                    <div class="tag">Economía</div>
+                    <div class="tag">Deportes</div>
+                    <div class="tag">Tecnología</div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div>Categorías</div>
+            <div class="category-buttons">
+                <a href="#" class="category-button">Política</a>
+                <a href="#" class="category-button">Deportes</a>
+                <a href="#" class="category-button">Tecnología</a>
+            </div>
+            <div class="sidebar__highlights">
+                <div>Noticias Destacadas</div>
+                <div>
+                    <div><a href="#">Título destacado 1</a></div>
+                    <div><a href="#">Título destacado 2</a></div>
+                    <div><a href="#">Título destacado 3</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="news__card">
+                <img src="https://loremflickr.com/300/200/politics" alt="Noticia" class="news__image">
+                <div>Elecciones Generales</div>
+                <div>El país se prepara para las elecciones con debates intensos...</div>
+                <div>18 de febrero de 2025</div>
+            </div>
+            <div class="news__card">
+                <img src="https://loremflickr.com/300/200/sports" alt="Noticia" class="news__image">
+                <div>Final de la Champions</div>
+                <div>El equipo logra una histórica victoria en la final...</div>
+                <div>17 de febrero de 2025</div>
+            </div>
+            <div class="news__card">
+                <img src="https://loremflickr.com/300/200/technology" alt="Noticia" class="news__image">
+                <div>Nueva IA revoluciona la industria</div>
+                <div>Una innovadora IA está transformando la automatización...</div>
+                <div>16 de febrero de 2025</div>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>Estadísticas de Publicaciones</div>
+            <div>
+                <div>Categoría</div>
+                <div>Esta Semana</div>
+                <div>Este Mes</div>
+                <div>Este Año</div>
+            </div>
+            <div>
+                <div>Política</div>
+                <div>15</div>
+                <div>45</div>
+                <div>320</div>
+            </div>
+            <div>
+                <div>Deportes</div>
+                <div>20</div>
+                <div>60</div>
+                <div>500</div>
+            </div>
+            <div>
+                <div>Tecnología</div>
+                <div>10</div>
+                <div>35</div>
+                <div>250</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__nav">
+            <div class="footer__menu">
+                <div><a href="#">Aviso Legal</a></div>
+                <div><a href="#">Política de Privacidad</a></div>
+                <div><a href="#">Términos y Condiciones</a></div>
+            </div>
+        </div>
+        <div class="footer__certifications">
+            <img src="cert1.png" alt="Certificación 1">
+            <img src="cert2.png" alt="Certificación 2">
+        </div>
+    </div>
+</body>
+
+</html>
