@@ -4,9 +4,7 @@
 
 Se ha solicitado a varias IAs que nos ayudasen a generar un prompt para cumplir con los requerimientos de buenas prácticas para que esto fuera posible. Hemos obtenido varios prompts, hemos descartado los menos útiles y descriptivos, y hemos dejado finalmente solo tres, uno de ChatGPT, otro de Qwen, otro de Gemini y el último de Mistral.
 
-## Video de Cómo se Realizan las Pruebas
 
-Mismo HTML, mismo prompt.
 
 ## Proceso
 
